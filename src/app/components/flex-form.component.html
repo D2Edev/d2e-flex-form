@@ -1,0 +1,23 @@
+<div *ngIf='allowShow'>
+
+	<form class="form-horizontal" [formGroup]='myForm'
+		(ngSubmit)="saveConfig()">
+		<div class="form-group" >
+			<app-flex-form-input-placeholder
+				[parentForm]='myForm'
+				[value]='elt'
+				[listener]='listener'
+				*ngFor='let elt of inputs'
+				>
+			</app-flex-form-input-placeholder>
+		</div>
+		<div *ngIf='!myForm.valid' class="alert alert-danger">
+			<div *ngFor='let errDesc of listFormErrors()'>
+				<strong>{{errDesc.fieldName}}:</strong> {{errDesc.errDesc}}
+			</div>
+		</div>
+		<button type="submit" [disabled]="myForm.pristine || !myForm.valid"
+			class="btn btn-success">Submit</button>
+	</form>
+
+</div>
