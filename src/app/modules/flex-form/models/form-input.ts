@@ -2,6 +2,13 @@ import { FormInputOption } from './form-input-option';
 import { Entry } from './entry';
 
 export class FormInput {
+
+  static readonly TEXT = 'text';
+  static readonly SELECT = 'select';
+  static readonly TEXTAREA = 'textarea';
+  static readonly CHECKBOX = 'checkbox';
+  static readonly NUMBER = 'number';
+
   public hidden = false;
   public name: string;
   public type: string;

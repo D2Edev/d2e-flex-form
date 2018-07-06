@@ -6,19 +6,21 @@ import { FlexFormSelectComponent } from './components/flex-form-input-placeholde
 import { FlexFormTextareaComponent } from './components/flex-form-input-placeholder/flex-form-textarea/flex-form-textarea.component';
 import { FlexFormComponent } from './components/flex-form.component';
 import { FlexFormInputPlaceholderComponent } from './components/flex-form-input-placeholder/flex-form-input-placeholder.component';
+import { FlexFormCheckboxComponent } from './components/flex-form-input-placeholder/flex-form-checkbox/flex-form-checkbox.component';
 
 @NgModule({
   declarations: [
+    FlexFormComponent,
+    FlexFormInputPlaceholderComponent,
     FlexFormInputComponent,
     FlexFormSelectComponent,
     FlexFormTextareaComponent,
-    FlexFormComponent,
-    FlexFormInputPlaceholderComponent
+    FlexFormCheckboxComponent
   ],
   imports: [
     CommonModule, ReactiveFormsModule
   ],
-  entryComponents: [FlexFormInputComponent, FlexFormSelectComponent, FlexFormTextareaComponent],
+  entryComponents: [FlexFormInputComponent, FlexFormSelectComponent, FlexFormTextareaComponent, FlexFormCheckboxComponent],
   exports: [FlexFormComponent]
 })
 export class FlexFormModule { }

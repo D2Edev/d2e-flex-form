@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, ComponentRef, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnDestroy } from '@angular/core';
-import { FormInput } from '../../../models/form-input';
+import { FormInput } from '../../models/form-input';
 import { FlexFormTypeMapper } from '../flex-form-type-mapper';
 import { FormGroup } from '@angular/forms';
 import { AbstractFormInput } from '../abstract-form-input';
-import { SelectionListener } from '../../../models/selection-listener';
+import { SelectionListener } from '../../models/selection-listener';
 
 @Component({
   selector: 'app-flex-form-input-placeholder',

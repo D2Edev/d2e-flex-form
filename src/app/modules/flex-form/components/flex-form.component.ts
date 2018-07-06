@@ -1,9 +1,9 @@
-import { FormInput } from '../../models/form-input';
-import { FormInputOption } from '../../models/form-input-option';
+import { FormInput } from '../models/form-input';
+import { FormInputOption } from '../models/form-input-option';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, ValidatorFn } from '@angular/forms';
-import { SelectionListener } from '../../models/selection-listener';
-import { ErrorMessages } from '../../models/error-messages';
+import { SelectionListener } from '../models/selection-listener';
+import { ErrorMessages } from '../models/error-messages';
 
 @Component({
   selector: 'app-flex-form',
@@ -42,7 +42,7 @@ export class FlexFormComponent implements OnInit, SelectionListener<string> {
           return;
         }
         const err = {
-          fieldName: input.name,
+          fieldName: input.label,
           errDesc: ers.error
         };
         errors.push(err);

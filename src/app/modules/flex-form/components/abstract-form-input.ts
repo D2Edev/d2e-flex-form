@@ -1,6 +1,6 @@
 import { FormGroup } from '@angular/forms';
-import { FormInput } from '../../models/form-input';
-import { SelectionListener } from '../../models/selection-listener';
+import { FormInput } from '../models/form-input';
+import { SelectionListener } from '../models/selection-listener';
 
 export abstract class AbstractFormInput {
 
