@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormInput } from './models/form-input';
-import { FormInputOption } from './models/form-input-option';
+import { FormInput } from './modules/models/form-input';
+import { FormInputOption } from './modules/models/form-input-option';
 
 @Component({
   selector: 'app-root',
