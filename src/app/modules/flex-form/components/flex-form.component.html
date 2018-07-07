@@ -2,22 +2,28 @@
 
 	<form class="form-horizontal" [formGroup]='myForm'
 		(ngSubmit)="saveConfig()">
-		<div class="form-group" >
-			<app-flex-form-input-placeholder
-				[parentForm]='myForm'
-				[value]='elt'
-				[listener]='listener'
-				*ngFor='let elt of inputs'
-				>
-			</app-flex-form-input-placeholder>
-		</div>
-		<div *ngIf='!myForm.valid' class="alert alert-danger">
-			<div *ngFor='let errDesc of listFormErrors()'>
-				<strong>{{errDesc.fieldName}}:</strong> {{errDesc.errDesc}}
+		<app-flex-form-input-placeholder
+			*ngFor='let elt of inputs'
+			[parentForm]='myForm'
+			[value]='elt'
+			[listener]='listener'
+			>
+		</app-flex-form-input-placeholder>
+		<div *ngIf='!myForm.valid' class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="alert alert-danger">
+					<div *ngFor='let errDesc of listFormErrors()'>
+						<strong>{{errDesc.fieldName}}:</strong> {{errDesc.errDesc}}
+					</div>
+				</div>
 			</div>
 		</div>
-		<button type="submit" [disabled]="myForm.pristine || !myForm.valid"
-			class="btn btn-success">Submit</button>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" [disabled]="myForm.pristine || !myForm.valid"
+				class="btn btn-success">Submit</button>
+			</div>
+		</div>
 	</form>
 
 </div>

@@ -21,8 +21,6 @@ export class AppComponent implements OnInit {
     constr01.minMessage = 'Kuda polez, davaj obratno, minimum 2!';
     input = new FormInput('name', FormInput.TEXT, 'Name', false, false, new FormInputOption(), constr01);
     tmp.push(input);
-    input = new FormInput('comment', FormInput.TEXTAREA, 'Comment', false, false);
-    tmp.push(input);
     const options: Entry[] = [];
     options.push(new Entry('Good', 'g'));
     options.push(new Entry('Funny', 'f'));
@@ -30,6 +28,8 @@ export class AppComponent implements OnInit {
     options.push(new Entry('Does anyone care?', 'd'));
     input = new FormInput('sel', FormInput.SELECT, 'What\'s your mood?', false, false);
     input.options = options;
+    tmp.push(input);
+    input = new FormInput('comment', FormInput.TEXTAREA, 'Comment', false, false);
     tmp.push(input);
     input = new FormInput('agreed', FormInput.CHECKBOX, 'Agreed with conditions', false, false);
     tmp.push(input);
